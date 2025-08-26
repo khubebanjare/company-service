@@ -1,0 +1,42 @@
+{
+  "info": {
+    "name": "Company Service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Company",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"compName\": \"Khube Soft\",\n    \"employee\": { \"empId\": 1 }\n}"
+        },
+        "url": { "raw": "http://localhost:8083/api/companies", "protocol": "http", "host": ["localhost"], "port": "8083", "path": ["api", "companies"] }
+      }
+    },
+    {
+      "name": "Get All Companies",
+      "request": { "method": "GET", "url": { "raw": "http://localhost:8083/api/companies", "protocol": "http", "host": ["localhost"], "port": "8083", "path": ["api", "companies"] } }
+    },
+    {
+      "name": "Get Company By ID",
+      "request": { "method": "GET", "url": { "raw": "http://localhost:8083/api/companies/1", "protocol": "http", "host": ["localhost"], "port": "8083", "path": ["api", "companies", "1"] } }
+    },
+    {
+      "name": "Update Company",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n    \"compName\": \"Khube Tech\",\n    \"employee\": { \"empId\": 1 }\n}" },
+        "url": { "raw": "http://localhost:8083/api/companies/1", "protocol": "http", "host": ["localhost"], "port": "8083", "path": ["api", "companies", "1"] }
+      }
+    },
+    {
+      "name": "Delete Company",
+      "request": { "method": "DELETE", "url": { "raw": "http://localhost:8083/api/companies/1", "protocol": "http", "host": ["localhost"], "port": "8083", "path": ["api", "companies", "1"] } }
+    }
+  ]
+}
+

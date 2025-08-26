@@ -1,0 +1,8 @@
+server:
+  port: 9084
+
+spring:
+  application:
+    name: company-service
+  config:
+    import: "optional:configserver:http://localhost:8888"
