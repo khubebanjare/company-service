@@ -1,0 +1,14 @@
+server:
+  port: 9084
+
+spring:
+  application:
+    name: company-service
+  config:
+    import: "optional:configserver:http://localhost:8888"
+
+info:
+  app:
+    name: "${spring.application.name}"
+    description: "Company Service for managing company data"
+    version: "1.0.0"
